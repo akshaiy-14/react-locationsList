@@ -6,7 +6,7 @@ const LocationsList = ({ locations, handleChecks, handleDeleteLocation }) => {
   return (
     <ul>
           {locations.map((location) => (
-            <ListItem location = {location} handleChecks = {handleChecks} handleDeleteLocation = {handleDeleteLocation}/>
+            <ListItem key = {location.id} location = {location} handleChecks = {handleChecks} handleDeleteLocation = {handleDeleteLocation}/>
           ))}
         </ul>
   )

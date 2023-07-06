@@ -1,0 +1,19 @@
+{
+  "locations": [
+    {
+      "id": 1,
+      "checked": false,
+      "placeName": "New York"
+    },
+    {
+      "id": 2,
+      "checked": false,
+      "placeName": "California"
+    },
+    {
+      "placeName": "Seattle",
+      "id": 4,
+      "checked": false
+    }
+  ]
+}

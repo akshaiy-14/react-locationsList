@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SearchLocation = ( {search, setSearch} ) => {
+const SearchLocation = ( {setSearch} ) => {
   return (
     <form onSubmit={(e) => e.preventDefault()}>
         <label>
