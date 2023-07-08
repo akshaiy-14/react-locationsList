@@ -1,15 +1,5 @@
 
 
-header {
-  background-color: rgb(21, 21, 23);
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  height: 3rem; 
-}
-
 main {
   display: flex;
   flex-direction: column;
@@ -27,9 +17,9 @@ form {
 }
 
 footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
-  height: 2.5rem; 
+  height: 2.5rem;
   background-color: rgb(21, 21, 23);
   width: 100%;
   color: white;

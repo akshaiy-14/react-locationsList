@@ -1,14 +1,16 @@
 import React from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Form } from 'react-bootstrap';
 
 const SearchLocation = ( {setSearch} ) => {
   return (
-    <form onSubmit={(e) => e.preventDefault()}>
-        <label>
+    <Form onSubmit={(e) => e.preventDefault()}>
+        <Form.Label>
             Search Location: 
-        </label>
-        <input required type="text" placeholder="Search a location" onChange={(e) => setSearch(e.target.value)}>
-        </input>
-    </form>
+        </Form.Label>
+        <Form.Control required type="text" placeholder="Search a location" onChange={(e) => setSearch(e.target.value)}>
+        </Form.Control>
+    </Form>
   )
 }
 

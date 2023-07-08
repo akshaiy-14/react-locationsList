@@ -1,17 +1,21 @@
 import React from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 
 const Header = (props) => {
   return (
-    <header>
-        <h1>
-            {props.title}
-        </h1>
-    </header>
+      <Navbar bg="dark" data-bs-theme="dark">
+        <Container fluid>
+          <Navbar.Brand>{props.title}</Navbar.Brand>
+          <Nav className="me-auto">
+          </Nav>
+        </Container>
+      </Navbar>
   )
 }
 
 Header.defaultProps = {
-    title: "Welcome to my website!"
+    title: "Travel Diary"
 }
 
 export default Header

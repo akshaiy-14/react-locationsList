@@ -4,6 +4,8 @@ import Footer from './Footer';
 import AddLocation from './AddLocation';
 import { useState, useEffect } from 'react';
 import SearchLocation from './SearchLocation';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container, Alert } from 'react-bootstrap';
 
 function App() {
 
@@ -122,17 +124,21 @@ function App() {
 
   
   return (
-    <div className="App">
+    <Container fluid>
       <Header />
+      <br></br>
       <AddLocation newLocation={newLocation} setNewLocation={setNewLocation} handleSubmitLocation={handleSubmitLocation} />
+      <br></br>
       <SearchLocation search={search} setSearch={setSearch} />
+      <br></br>
+      <br></br>
       <main>
-        {apiFetchError && <p style={{color:"red"}}> {apiFetchError}</p>}
-        {isLoading && <p> The data is loading... </p>}
+        {apiFetchError && <Alert variant="danger"> {apiFetchError} </Alert>}
+        {isLoading && <Alert variant="primary"> The data is loading... </Alert>}
         {!apiFetchError && !isLoading && <Content locations={locations.filter(location => ((location.placeName).toLowerCase()).includes(search.toLowerCase()))} setLocations={setLocations} handleChecks={handleChecks} handleDeleteLocation={handleDeleteLocation} />}
       </main>
       <Footer />
-    </div>
+    </Container>
   );
 }
 

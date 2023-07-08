@@ -1,16 +1,20 @@
 import React from 'react'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Form } from 'react-bootstrap'
+import Button from '@mui/material/Button';
 
 const AddLocation = ({newLocation, setNewLocation, handleSubmitLocation}) => {
 
   return (
-    <form>
-        <label>
+    <Form>
+        <Form.Label>
             Add Location: 
-        </label>
-        <input required type="text" placeholder="Add a location" value = {newLocation} onChange = {(e) => setNewLocation(e.target.value)}>
-        </input>
-        <button onClick={handleSubmitLocation}> Add </button>
-    </form>
+        </Form.Label>
+        <Form.Control required type="text" placeholder="Add a location" value = {newLocation} onChange = {(e) => setNewLocation(e.target.value)}>
+        </Form.Control>
+        <br></br>
+        <Button variant='contained' onClick={handleSubmitLocation}> Add </Button>
+    </Form>
   )
 }
 

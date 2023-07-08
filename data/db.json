@@ -6,13 +6,13 @@
       "placeName": "New York"
     },
     {
-      "id": 2,
-      "checked": false,
-      "placeName": "California"
+      "placeName": "India",
+      "id": 5,
+      "checked": true
     },
     {
-      "placeName": "Seattle",
-      "id": 4,
+      "placeName": "Kenya",
+      "id": 6,
       "checked": false
     }
   ]
